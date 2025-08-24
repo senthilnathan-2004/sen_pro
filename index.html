@@ -3,700 +3,706 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Senthilnathan R - Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/devicons@1.8.0/css/devicons.min.css" rel="stylesheet">
+    <title>Senthilnathan R - Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Full Stack Developer specializing in MERN stack, Python, and modern web technologies. Computer Science undergraduate seeking internship opportunities."
+    />
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Mouse follower -->
-    <div class="mouse-follower"></div>
-
-    <!-- Header -->
-    <header id="header">
-      <h1><p>Portfolio</p></h1>
-      <nav id="nav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#edu">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="resume.pdf" target="_blank">Resume</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div id="container">
-        <svg
-          id="headerSvg"
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          viewBox="0 0 50 50"
-        >
-          <path
-            d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"
-          ></path>
-        </svg>
-      </div>
-    </header>
-
-    <div id="body">
-      <!-- Hero Section -->
-      <section id="home" class="hero-section">
-        <div class="hero-background">
-          <div class="hero-particle" data-speed="0.5"></div>
-          <div class="hero-particle" data-speed="0.8"></div>
-          <div class="hero-particle" data-speed="0.3"></div>
-          <div class="hero-particle" data-speed="0.6"></div>
-          <div class="hero-particle" data-speed="0.4"></div>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-text">SR</span>
         </div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#ai-chat" class="nav-link">AI Assistant</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-container">
         <div class="hero-content">
           <div class="hero-text">
             <h1 class="hero-title">
-              <span class="hero-line">Hi, I'm</span>
-              <span class="hero-name">Senthilnathan R</span>
-              <span class="hero-subtitle">Full-Stack Developer</span>
+              <span class="greeting">Hi, I'm</span>
+              <span class="name">Senthilnathan R</span>
+              <span class="typing-text">Full Stack Developer</span>
             </h1>
             <p class="hero-description">
-              Passionate about creating seamless and high-performance web
-              applications with clean code and user-friendly experiences.
+              Ambitious Computer Science undergraduate passionate about building
+              interactive web applications using MERN stack and Python
+              frameworks. I create digital experiences that solve real-world
+              problems.
             </p>
             <div class="hero-buttons">
-              <a href="#projects" class="hero-btn primary">View My Work</a>
-              <a href="#contact" class="hero-btn secondary">Get In Touch</a>
+              <a href="#contact" class="btn btn-primary">Get In Touch</a>
+              <a href="#projects" class="btn btn-secondary">View Projects</a>
             </div>
-          </div>
-          <div class="hero-visual">
-            <div class="hero-code-block">
-              <div class="code-header">
-                <span class="code-dot red"></span>
-                <span class="code-dot yellow"></span>
-                <span class="code-dot green"></span>
-              </div>
-              <div class="code-content">
-                <div class="code-line">
-                  <span class="code-keyword">const</span>
-                  <span class="code-variable"> developer</span>
-                  <span class="code-operator"> = </span>
-                  <span class="code-string">'Senthilnathan'</span>
-                </div>
-                <div class="code-line">
-                  <span class="code-keyword">const</span>
-                  <span class="code-variable"> skills</span>
-                  <span class="code-operator"> = </span>
-                  <span class="code-bracket">[</span>
-                </div>
-                <div class="code-line indent">
-                  <span class="code-string">'React.js'</span
-                  ><span class="code-operator">,</span>
-                </div>
-                <div class="code-line indent">
-                  <span class="code-string">'Node.js'</span
-                  ><span class="code-operator">,</span>
-                </div>
-                <div class="code-line indent">
-                  <span class="code-string">'MongoDB'</span>
-                </div>
-                <div class="code-line">
-                  <span class="code-bracket">]</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Me -->
-
-      <section id="about" class="about  scroll-section  ">     
-              <div class="hero-background" style="z-index: -1;">
-          <div class="hero-particle" data-speed="0.5"></div>
-          <div class="hero-particle" data-speed="0.8"></div>
-          <div class="hero-particle" data-speed="0.3"></div>
-          <div class="hero-particle" data-speed="0.6"></div>
-          <div class="hero-particle" data-speed="0.4"></div>
-        </div>
-        <div class="container">
-          <div class="section-header">
-            <h2>About Me</h2>
-          </div>
-
-          <div class="about-content">
-
-         <div class="about-text-container"> 
-            <div class="code-header">
-                <span class="code-dot red"></span>
-                <span class="code-dot yellow"></span>
-                <span class="code-dot green"></span>
-              </div>  
-            <div class="about-text">
-              <div class="text-container">
-                <span class="text-block1"
-                  >Hi, I'm <b class="text-block2">Senthilnathan</b></span
-                >
-                <div class="text-block code-line indent">
-                  I'm a Full-Stack Developer passionate about creating seamless
-                  and high performance web applications.
-                </div>
-                <div class="text-block code-line indent">
-                  With a strong focus on clean code and user-friendly
-                  experiences, I love turning ideas into impactful digital
-                  solutions.
-                </div>
-                <div class="text-block code-line indent">
-                  Always eager to learn and innovate—let's build something great
-                  together!
-                </div>
-
-                <a
-                href="resume.pdf"
-                class="hero-btn primary about-btn "
-                id="downloadResume"
-                download="resume.pdf"
+            <div class="hero-socials">
+              <a
+                href="https://github.com/senthilnathan-2004"
+                target="_blank"
+                class="social-link"
               >
-                <i class="fas fa-download"></i> Download Resume
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://linkedin.com/in/senthilnathan--r"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=12.81875,80.2249297"  target="_blank" class="social-link">
+                <i class="fas fa-map-marker-alt"></i>
+
+              </a>
+              <a
+                href="mailto:senthilragunathan2004@gmail.com"
+                class="social-link"
+              >
+                <i class="fas fa-envelope"></i>
               </a>
             </div>
+          </div>
+          <div class="hero-avatar">
+            <div class="avatar-container">
+              <div class="avatar-bg"></div>
+              <div class="avatar-icon">
+                <i class="fas fa-code"></i>
               </div>
-
-              
-         </div>
-            <div class="about-image">
-              
-                <img class="image-placeholder" src="photo.jpeg" alt="">
-              </div>
-
+            </div>
           </div>
         </div>
-      </section>
-
-      <!-- Education -->
-      <section id="edu" class="scroll-section" style="padding-top: 5rem">
-
-        <h2>Education</h2>
-              <div class="education-container">
-            <div class="section-header">
-            </div>
-            <div class="education-timeline">
-                <div class="timeline-line"></div>
-                
-                <div class="education-item" data-year="2022-2026">
-                    <div class="timeline-dot">
-                        <div class="dot-inner"></div>
-                        <div class="dot-pulse"></div>
-                    </div>
-                    <div class="education-card">
-                        <div class="card-glow"></div>
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <div class="icon-bg"></div>
-                                <span class="icon-emoji">🎓</span>
-                            </div>
-                            <div class="card-year">2022 - 2026</div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="degree-title">Bachelor of Technology</h3>
-                            <h4 class="degree-field">Computer Science and Engineering</h4>
-                            <p class="institution">Anand Institute Of Higher Technology, Chennai</p>
-                            <div class="grade-container">
-                                <span class="grade-label">CGPA:</span>
-                                <div class="grade-value">
-                                    <span class="grade-number">8.2</span>
-                                    <span class="grade-total">/10</span>
-                                </div>
-                                <div class="grade-bar">
-                                    <div class="grade-progress" data-progress="82"></div>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="education-item" data-year="2021-2022">
-                    <div class="timeline-dot">
-                        <div class="dot-inner"></div>
-                        <div class="dot-pulse"></div>
-                    </div>
-                    <div class="education-card">
-                        <div class="card-glow"></div>
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <div class="icon-bg"></div>
-                                <span class="icon-emoji">📚</span>
-                            </div>
-                            <div class="card-year">2021 - 2022</div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="degree-title">Higher Secondary Certificate</h3>
-                            <h4 class="degree-field">(HSC)</h4>
-                            <p class="institution">Kuyilappalayam Higher Secondary School</p>
-                            <div class="grade-container">
-                                <span class="grade-label">Percentage:</span>
-                                <div class="grade-value">
-                                    <span class="grade-number">82</span>
-                                    <span class="grade-total">%</span>
-                                </div>
-                                <div class="grade-bar">
-                                    <div class="grade-progress" data-progress="82"></div>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="education-item" data-year="2019-2020">
-                    <div class="timeline-dot">
-                        <div class="dot-inner"></div>
-                        <div class="dot-pulse"></div>
-                    </div>
-                    <div class="education-card">
-                        <div class="card-glow"></div>
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <div class="icon-bg"></div>
-                                <span class="icon-emoji">🏫</span>
-                            </div>
-                            <div class="card-year">2019 - 2020</div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="degree-title">Secondary School Certificate</h3>
-                            <h4 class="degree-field"> (SSLC)</h4>
-                            <p class="institution">Government Higher Secondary School</p>
-                            <div class="grade-container">
-                                <span class="grade-label">Percentage:</span>
-                                <div class="grade-value">
-                                    <span class="grade-number">70</span>
-                                    <span class="grade-total">%</span>
-                                </div>
-                                <div class="grade-bar">
-                                    <div class="grade-progress" data-progress="70"></div>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
-      </section>
-
-      <!-- Skills -->
-       <section style="background-color: white;" id="skills" class="scroll-section">
-
-         <div class="hero-background" style="z-index: -1;">
-          <div class="hero-particle" data-speed="0.5"></div>
-          <div class="hero-particle" data-speed="0.8"></div>
-          <div class="hero-particle" data-speed="0.3"></div>
-          <div class="hero-particle" data-speed="0.6"></div>
-          <div class="hero-particle" data-speed="0.4"></div>
+        <div class="scroll-indicator">
+          <span>Scroll Down</span>
+          <i class="fas fa-arrow-down"></i>
         </div>
-
-        <h2>Technical Skills</h2>
-        <div class="project-container scroll-section" >
-
-          <div class="banner">
-                   
-          <div class="carousel">
-          
-            
-      <div class="item" style="--i: 0">
-        <div class="item-container"> 
-            <svg class="skill-logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-                            <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"></path><path fill="#EEE" d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"></path>
-                            </svg>
-                    <span>HTML</span>  
-                    <div class="skill-data">Markup language for structuring web pages.</div>     
-        </div></div>
-      <div class="item" style="--i: 1">
-        <div class="item-container">
-          
-              <svg class="skill-logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-                            <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z"></path><path fill="#EEE" d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"></path>
-                            </svg>
-                            <span>CSS</span>
-                            <div class="skill-data">Stylesheet language for designing and layout.</div>
-        </div></div>
-      <div class="item" style="--i: 2">
-        <div class="item-container">
-             <svg class="skill-logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-                            <path fill="#ffd600" d="M6,42V6h36v36H6z"></path><path fill="#000001" d="M29.538 32.947c.692 1.124 1.444 2.201 3.037 2.201 1.338 0 2.04-.665 2.04-1.585 0-1.101-.726-1.492-2.198-2.133l-.807-.344c-2.329-.988-3.878-2.226-3.878-4.841 0-2.41 1.845-4.244 4.728-4.244 2.053 0 3.528.711 4.592 2.573l-2.514 1.607c-.553-.988-1.151-1.377-2.078-1.377-.946 0-1.545.597-1.545 1.377 0 .964.6 1.354 1.985 1.951l.807.344C36.452 29.645 38 30.839 38 33.523 38 36.415 35.716 38 32.65 38c-2.999 0-4.702-1.505-5.65-3.368L29.538 32.947zM17.952 33.029c.506.906 1.275 1.603 2.381 1.603 1.058 0 1.667-.418 1.667-2.043V22h3.333v11.101c0 3.367-1.953 4.899-4.805 4.899-2.577 0-4.437-1.746-5.195-3.368L17.952 33.029z"></path>
-                            </svg>   
-                             <span>JAVASCRIPT</span>
-                             <div class="skill-data">Programming language for interactivity.</div>
-        </div></div>
-      <div class="item" style="--i: 3">
-        <div class="item-container">
-            <svg class="skill-logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-                            <path fill="#80deea" d="M24,34C11.1,34,1,29.6,1,24c0-5.6,10.1-10,23-10c12.9,0,23,4.4,23,10C47,29.6,36.9,34,24,34z M24,16	c-12.6,0-21,4.1-21,8c0,3.9,8.4,8,21,8s21-4.1,21-8C45,20.1,36.6,16,24,16z"></path><path fill="#80deea" d="M15.1,44.6c-1,0-1.8-0.2-2.6-0.7C7.6,41.1,8.9,30.2,15.3,19l0,0c3-5.2,6.7-9.6,10.3-12.4c3.9-3,7.4-3.9,9.8-2.5	c2.5,1.4,3.4,4.9,2.8,9.8c-0.6,4.6-2.6,10-5.6,15.2c-3,5.2-6.7,9.6-10.3,12.4C19.7,43.5,17.2,44.6,15.1,44.6z M32.9,5.4	c-1.6,0-3.7,0.9-6,2.7c-3.4,2.7-6.9,6.9-9.8,11.9l0,0c-6.3,10.9-6.9,20.3-3.6,22.2c1.7,1,4.5,0.1,7.6-2.3c3.4-2.7,6.9-6.9,9.8-11.9	c2.9-5,4.8-10.1,5.4-14.4c0.5-4-0.1-6.8-1.8-7.8C34,5.6,33.5,5.4,32.9,5.4z"></path><path fill="#80deea" d="M33,44.6c-5,0-12.2-6.1-17.6-15.6C8.9,17.8,7.6,6.9,12.5,4.1l0,0C17.4,1.3,26.2,7.8,32.7,19	c3,5.2,5,10.6,5.6,15.2c0.7,4.9-0.3,8.3-2.8,9.8C34.7,44.4,33.9,44.6,33,44.6z M13.5,5.8c-3.3,1.9-2.7,11.3,3.6,22.2	c6.3,10.9,14.1,16.1,17.4,14.2c1.7-1,2.3-3.8,1.8-7.8c-0.6-4.3-2.5-9.4-5.4-14.4C24.6,9.1,16.8,3.9,13.5,5.8L13.5,5.8z"></path><circle cx="24" cy="24" r="4" fill="#80deea"></circle>
-                            </svg>
-                            <span>REACTJS</span>
-                            <div class="skill-data">JavaScript library for building UIs.</div>
-        </div></div>
-      <div class="item" style="--i: 4">
-        <div class="item-container">
-             <svg class="skill-logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-                            <path fill="#21a366" d="M24.007,45.419c-0.574,0-1.143-0.15-1.646-0.44l-5.24-3.103c-0.783-0.438-0.401-0.593-0.143-0.682	c1.044-0.365,1.255-0.448,2.369-1.081c0.117-0.067,0.27-0.043,0.39,0.028l4.026,2.389c0.145,0.079,0.352,0.079,0.486,0l15.697-9.061	c0.145-0.083,0.24-0.251,0.24-0.424V14.932c0-0.181-0.094-0.342-0.243-0.432L24.253,5.446c-0.145-0.086-0.338-0.086-0.483,0	L8.082,14.499c-0.152,0.086-0.249,0.255-0.249,0.428v18.114c0,0.173,0.094,0.338,0.244,0.42l4.299,2.483	c2.334,1.167,3.76-0.208,3.76-1.591V16.476c0-0.255,0.2-0.452,0.456-0.452h1.988c0.248,0,0.452,0.196,0.452,0.452v17.886	c0,3.112-1.697,4.9-4.648,4.9c-0.908,0-1.623,0-3.619-0.982l-4.118-2.373C5.629,35.317,5,34.216,5,33.042V14.928	c0-1.179,0.629-2.279,1.646-2.861L22.36,3.002c0.994-0.562,2.314-0.562,3.301,0l15.694,9.069C42.367,12.656,43,13.753,43,14.932	v18.114c0,1.175-0.633,2.271-1.646,2.861L25.66,44.971c-0.503,0.291-1.073,0.44-1.654,0.44"></path><path fill="#21a366" d="M28.856,32.937c-6.868,0-8.308-3.153-8.308-5.797c0-0.251,0.203-0.452,0.455-0.452h2.028	c0.224,0,0.413,0.163,0.448,0.384c0.306,2.066,1.218,3.108,5.371,3.108c3.308,0,4.715-0.747,4.715-2.502	c0-1.01-0.401-1.76-5.54-2.263c-4.299-0.424-6.955-1.371-6.955-4.809c0-3.167,2.672-5.053,7.147-5.053	c5.026,0,7.517,1.745,7.831,5.493c0.012,0.13-0.035,0.255-0.122,0.35c-0.086,0.09-0.208,0.145-0.334,0.145h-2.039	c-0.212,0-0.397-0.149-0.44-0.354c-0.491-2.173-1.678-2.868-4.904-2.868c-3.611,0-4.031,1.257-4.031,2.2	c0,1.143,0.495,1.477,5.367,2.122c4.825,0.64,7.116,1.544,7.116,4.935c0,3.418-2.853,5.379-7.827,5.379"></path>
-                            </svg>
-         <span>NODEJS</span>
-         <div class="skill-data">JavaScript runtime for server-side development.</div>
-        </div></div>
-      <div class="item" style="--i: 5">
-        <div class="item-container">
-            <svg class="skill-logo"  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-                            <path fill="#212121" d="M23.697,37.56h1.18c0.84,0,1.631-0.392,2.139-1.061l7.485-9.847l7.485,9.847	c0.508,0.668,1.299,1.061,2.139,1.061h1.18L35.756,25l9.121-12h-1.18c-0.84,0-1.631,0.392-2.139,1.061L34.5,23.347l-7.059-9.287	C26.933,13.392,26.142,13,25.302,13h-1.18l9.121,12L23.697,37.56z"></path><path fill="#212121" d="M24,26v-3c0-6.675-5.945-11.961-12.829-10.852C5.812,13.011,2,17.857,2,23.284L2,24v2v0.142	c0,6.553,4.777,11.786,10.868,11.858c5.092,0.06,9.389-3.344,10.707-7.999h-1.028c-0.62,0-1.182,0.355-1.451,0.913	c-1.739,3.595-5.789,5.862-10.228,4.842C6.776,34.815,4,30.981,4,26.783V26H24z M4,23.71c0-4.708,2.804-8.557,6.924-9.478	C16.798,12.92,22,17.352,22,23v1H4V23.71z"></path>
-                            </svg>
-                            <span>EXPRESS</span>
-                            <div class="skill-data">Web framework for Node.js (backend APIs).</div>
-        </div></div>
-      <div class="item" style="--i: 6">
-        <div class="item-container">
-              <svg class="skill-logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-                            <path fill="#5d4037" d="M42,17.3C42,37.8,24,44,24,44S6,37.8,6,17.3c0-2.5,0.2-4.6,0.4-6.3c0.3-2.5,2-4.5,4.4-5.1 C13.9,5,18.8,4,24,4s10.1,1,13.3,1.9c2.4,0.6,4.1,2.7,4.4,5.1C41.8,12.7,42,14.9,42,17.3z"></path><path fill="#4caf50" d="M24,7c4.9,0,9.5,1,12.5,1.8c1.2,0.3,2,1.3,2.2,2.6c0.2,1.9,0.3,3.9,0.3,5.9c0,15.6-11.5,21.9-15,23.4 c-3.5-1.6-15-7.9-15-23.4c0-2,0.1-4,0.3-5.9c0.1-1.3,1-2.3,2.2-2.6C14.5,8,19.1,7,24,7 M24,4c-5.2,0-10.1,1-13.3,1.9 C8.4,6.5,6.6,8.6,6.4,11C6.2,12.7,6,14.9,6,17.3C6,37.8,24,44,24,44s18-6.2,18-26.7c0-2.5-0.2-4.6-0.4-6.3c-0.3-2.5-2-4.5-4.4-5.1 C34.1,5,29.2,4,24,4L24,4z"></path><path fill="#dcedc8" d="M23 28H25V36H23z"></path><path fill="#4caf50" d="M24,10c0,0-6,5-6,13c0,5.2,3.3,8.5,5,10l1-3l1,3c1.7-1.5,5-4.8,5-10C30,15,24,10,24,10z"></path><path fill="#81c784" d="M24,10c0,0-6,5-6,13c0,5.2,3.3,8.5,5,10l1-3V10z"></path>
-                            </svg>
-                            <span>MONGODB</span>
-                            <div class="skill-data">NoSQL database for flexible data storage.</div>
-        </div></div>
-      <div class="item" style="--i: 7">
-        <div class="item-container">
-             <img class="skill-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAKPUlEQVR4nO3ZfVBU5R4H8L3/3H+aaXdRkVfNd4FUzEqk2LPn5O36lo7eLIVMuBElaWL5CpY5ORXsC4gZmamwZ73XKc18AXFBIFQgRWVZJF8iIhSFfWPBfEW/d85R9oXlRe+tuwv7fGe+g+wccPl9Zs85z3MEAhISEhISEhISEhISEhISkv9D5n6Dv07OMg2iVZZwOss8h2abl9Aq8waGNX/BqMw7GZX5IK0yF9OsWUurTDWMytzAqEym9tIqUxvDmsGoTaBZYxvDGk3Wqk0NNGusoVmjllYbixm14SDDGnYyrOELWm3cQLOGJbTaMIdWGcO598C9F0FfzRTW8DitMjNStjmeZi2baNaioVlLHcM2o+eae67a9BA19lhara+j1XoNrdZvkrL6eFqlZ7j3LuhtmfyNSfiCqjmKZi0ZNGvR0qrmNoa1wLnuBcCoDU6lWX0bzeq1NGvIoNX6SPcFAf4izWqZxbCWPQxrudH5wHsfAONU/Q2GbdpDs/qZ3N8scIfQmc3DaFXLCYZtga19FgC2NpW9sPPqUFfPX8CwFp3j8D0FQM+doipdPX8B9bURngoQ8fUVuHr+ggnrzkPylcHjACK2XsaY9WddDxC6phqhidV45pNaRGxuBJNl6bMAtKoJ4Rn1GJ98AUEfVCJobaWbANh1fNJPePazWjy3sQES7vSk6r0ANKuHZNtVhH1ehwkpFxH8oY4fun3dDoDrOLuGJlXj6Q0/41nZrwjfeBkRGY2QbjeBUbkRAGsEtaMRz2+5jLD0OjytqEHoJ+cR8mEVgtdWWttx+L0CYNyas7Ym2jo2qRqh685hwscX8cynNZgoq0NYaj3C0y8jfHMDns+4iogtjZBsbQK1TQ9quwF0ptFaRmWyAbBG0FkGa6kd3PFNkHzdiIgtV/BcxmVM2lyPSZt+w8S0Ojwj/wUTPr2I0A3nMWZdNULWViE4SWfrWvv2VYCH6Bi+Vd32yaSeqkPIQ5QAJBIAApBEAEAACAAIQCIBIABrCQAIAAGA2wOMXaH1WICRq864HmBoTD7Gra7yOIDRiRUIjC12PUDg/AN4YkEughNOInTNWQ8A0GL4eycREF0I36h89wBo7+AFuRgVfxxjVur6HEDQ6goMWVwK/+gCfvDtdSuA+z3Id8hCDUa8fRTBCeUYu7qq1wEEJVVixPvlGBJfgoCYIvhG5T1ofu8AaG8A/zUbg18/jGGxRRgZfxxBCScRsqICY9dUuRwgOFGH0SvPYMSycgxdXIrBccUIWFgAv6g8vrbB92IAW7OdOmjBIQyOycPQ2EIMf/sYRsSXYNTiMoxeegKjl5Uj6P1TCF5RgZCVFQhZpcWTqyvvd43OChCSqEPImkq+wau0fINWVmD08tMY+V45Riw9geFLyjDsnVIMXXQMT7xZjEExhQhYkA+/KE0nzfMcgIDI9uZ0Wn++h7ppbjc9DL8uq7lfApBNAAiAhgAEEAAC4EcAch4JYNzbRzB59XHM+LAUYUt/QEAUAXhogMDIbLypPIUDZQ04X9+K1ut3cONWG66abuLHcyasZ6s7BRiy8DA+Yn/CufpWdEyT+Sa2ZNdizFsFnQIExxWgWGd4UCNel53xTICR0bkorGhCd/n16u9OAGFLi3D+kvPgO0ZvuYWZ68qcAELjixyOW7Wt2jMBth2qdRhE2917OFffglMXzfwnoDOAJ+PyUa+/7jRsY8stNJrv/4x9Wm/cAbX8GAHoCDA4KgfXbrRZh1Cvv47whEKH8/4LK48i7buLDgAHyq44DE/7iwVTk45bz/fPLSvGsSqjwzGnLzYTgI4A497KcxjCvpLLPV6EpSuO4u69ew5oQbH5TndBw6LzcOHSNYff/4+PTxIAe4BBkTn8xbY9t27fxaL0090CJH9zwWFwy7fqurwNTciodDg242AtAeh4Ddhz9BI65sQ5E2Lk5QiMcgYo6HDBHh9f0CVAxPtHHY49WmUkAB0BnlqUjwtd3M2crWvBnPWlDgCVtRaHT0x3C7GhCzWwO1vxv48AdLIOCInVIEvzK+602U3rQbjXln2ptQLY33pyp6+eVsK379y1Hq+rJQDdroTD3i3Alwdr8PtN23WBC/d92LuFPAC3MLNPSFx+lwDcIsw+hVoDAXiYrYin4o/gzM/NDgNar/6JB8jU1Dm8vii9okuAuLQzDsem7a0hAB3XASOiczvdC5q9vtRhQOnf/8wDvC4rd3i9uq6F35LoCDB4wWFoa2zXCy7TPigjAPYAo2JyUdNwjd8HeuK1HCsAd/ej2O14u5m4o4oHCIzKddr7KazQY8I7hdbhj48vRG55o8Mx3J5Pdwuxj9TnERRX6NRA/lFlHwZoT8vvd/DjOSN+qNQ7bTNcv9WGCe8csa6EpyQex83btotr+xYGd4Hmyv3bPubW25j4bnG3AF1FsqLEMwC6CncXsyj9jNNmXORnJ3m0h8ne4w0IiOp+M84jAbiVcOL2KhRX6nHFeMN6y8htnnFrA1V+HaTLf+jyecCzSwrx76J6h/2krpKp+Q3+dgghcQX8HlJPnZhwrPcABLy693++CxrOXZQf8YEMdxGe/kEJouWnECM/jalJJVi8Wet0KtpVdAmBr2n+lAcyPvMOuR5gwNSv3OqR5FsbK5wWd/tKr2DQAs0fDtBvaqbrAcTSFAyYtgWB8/a5BYD/g/0g7hMxNakUUx50VOyRPw4gUsMPX0SlugcAVy8mFQNnZiFw3n6XA/j/Wc+EIw9jwKxdEDOf88N3KwArBK2A94zt8H/5274BEJmHgXP3of90FmJ6o3XwbgtgqwxejBIDpm2F7+x/wf+V73sNgO+rOfCesxv9p2VCTKdDRCmdBt8rADqWA+k/5Ut4v5QJn9m74Df3OwTMP+A6gHm58HllPwbO2Y0BL6nR7+9b7QbesX0AoKt6MUr0e3EzBkzdCu8ZO+A9UwWfWTvhM2cXfF7eDd+5e+H76n6+fvMO8vWfn20DmJ8Dv3nZfH1f2X+/c7+Hz8vfYeDsb+E9axc/4P7TM9FvyjZ4/S0DYqarQSs9D0BsrfyRK6IU/0UfZfAEAASAAIAASAkAAaAIAAgAAQABkBIAAkARABAAgUAgopIveSqAUKKsd/X8BV508j89E0B5T0ilRgvcIV5S2RsiKvmapwAIJanX3Gb47RFP/myQmEpJE0lTWvsqgFCibBVJlKniCHmgwF3z+IsKLzGVvEJEpZSJKdndPgBwV0gpSoSUcrnw+S/Egt4UbyZtoJiSx4oo2W6RNOW33gIgpBR1IoniW2GE4o3HmLSBgr4SDkREJc8QU7KPxFTKHjGVUnH/lOUaACGlbBFKlBUiSrFHJFGuE0uV0/vUwB/pkyJJmSSiFK8JqZQEMSXbIJLKM8SUfI+YkhWJpHKdmJLV8JXK9GKp3CSSylrbAYQSeauIUphEEoVeRMlruAolCp1QIi/ihiuUyDOElGKDkFIkcP+HWJI66bFJMm9X/90kJCQkJCQkJCQkJCQkJAKPy38ARnaJe5LwbdMAAAAASUVORK5CYII=" alt="sql">
-             <span>SQL</span>
-             <div class="skill-data">Query language for relational databases.</div>
-        </div></div>
-      <div class="item" style="--i: 8">
-        <div class="item-container">
-             <svg class="skill-logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-<path fill="#8bc34a" d="M43.982,23.635c0.069-4.261-0.891-9.328-2.891-15.273l-1.568-4.662l-2.13,4.433 c-0.114,0.237-0.244,0.469-0.38,0.698C33.514,5.827,28.974,4,24,4C12.954,4,4,12.954,4,24c0,11.046,8.954,20,20,20s20-8.954,20-20 C44,23.877,43.984,23.758,43.982,23.635z"></path><path fill="#fff" d="M39.385 32.558c-3.123 4.302-8.651 4.533-13.854 4.442H18.75h-1.938c4.428-1.593 7.063-1.972 9.754-3.4 5.068-2.665 10.078-8.496 11.121-14.562-1.93 5.836-7.779 10.85-13.109 12.889-3.652 1.393-10.248 2.745-10.248 2.745l-.267-.145C9.573 32.268 9.437 22.214 17.6 18.968c3.574-1.423 6.993-.641 10.854-1.593 4.122-1.012 8.89-4.208 10.83-8.375C41.456 15.667 44.07 26.106 39.385 32.558L39.385 32.558zM15.668 38.445C15.386 38.795 14.955 39 14.505 39c-.823 0-1.495-.677-1.495-1.5s.677-1.5 1.495-1.5c.341 0 .677.118.941.336C16.086 36.855 16.186 37.805 15.668 38.445L15.668 38.445z"></path>
-</svg>   <span>SPRINGBOOT</span>
-<div class="skill-data">Java framework for building secure, scalable applications.</div>
-        </div></div>
-      <div class="item" style="--i: 9">
-        <div class="item-container">
-          <svg class="skill-logo"  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-<path fill="#673ab7" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5 V37z"></path><path fill="#fff" d="M33.03,25.6c-0.65-0.9-1.59-1.52-2.8-1.85c0,0,1.02-0.37,1.94-1.75c0.55-0.88,0.83-1.94,0.83-3.18 c0-2.15-0.78-3.8-2.34-4.93C29.1,12.76,27.34,12,24.35,12H15v24h10.43c2.83-0.02,4.96-0.63,6.41-1.8c1.44-1.19,2.16-2.95,2.16-5.3 C34,27.6,33.68,26.5,33.03,25.6z M21,16c0,0,4.17,0,4.25,0c1.52,0,2.75,1.23,2.75,2.75c0,1.52-1.23,2.75-2.75,2.75 c-0.08,0-4.25,0-4.25,0V16z M26,32h-5v-6h5c1.66,0,3,1.34,3,3C29,30.66,27.66,32,26,32z"></path>
-</svg>     <span>BOOTSTRAP</span>
-<div class="skill-data">Responsive CSS framework.</div>
-        </div></div>
-     
-    </div>
-    
-     
+      </div>
+      <div class="hero-bg-animation">
+        <div class="floating-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+          <div class="shape shape-4"></div>
+          <div class="shape shape-5"></div>
         </div>
-         
-        </div>
-      </section>
-      <!-- Projects -->
-       <section id="projects" class="scroll-section  skills-section">
-            <h2>Projects</h2>
-        <div class="skill-container">
-
-            <!-- projects Grid -->
-            <div class="skills-grid">
-
-                  <!-- project 1 Card -->
-                <div class="skill-card" data-skill="bootstrap" data-level="90">
-                    <div class="skill-icon">
-                        <i>1</i>
-                    </div>
-                    <svg onclick="opengithub('meatshop')" class="github"xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
-<path d="M 12 1.9921875 C 6.4855957 1.9921875 2 6.4769321 2 12 C 2 16.599161 5.1205653 20.490345 9.3671875 21.642578 A 0.50005 0.50005 0 0 0 9.9980469 21.160156 L 9.9980469 17.583984 A 0.50005 0.50005 0 0 0 9.9980469 17.398438 L 9.9980469 17 C 9.9980469 16.463435 10.20474 15.989016 10.550781 15.621094 A 0.50005 0.50005 0 0 0 10.310547 14.794922 C 8.3191985 14.288505 7 12.945349 7 11.492188 C 7 10.73278 7.3615845 9.9960348 8.015625 9.3925781 A 0.50005 0.50005 0 0 0 8.1679688 8.9277344 C 8.066665 8.41934 8.082645 7.8782734 8.0742188 7.34375 C 8.6127591 7.5825374 9.1625862 7.7923277 9.640625 8.1757812 A 0.50005 0.50005 0 0 0 10.09375 8.265625 C 10.683558 8.0925899 11.325263 7.9921875 12 7.9921875 C 12.673669 7.9921875 13.314937 8.0917915 13.904297 8.265625 A 0.50005 0.50005 0 0 0 14.359375 8.1777344 C 14.837054 7.7945694 15.386932 7.5824899 15.925781 7.34375 C 15.916981 7.8785794 15.933881 8.4199143 15.832031 8.9277344 A 0.50005 0.50005 0 0 0 15.982422 9.3945312 C 16.637666 9.9982795 17.001953 10.733923 17.001953 11.494141 C 17.001953 12.945944 15.680991 14.28753 13.689453 14.794922 A 0.50005 0.50005 0 0 0 13.449219 15.623047 C 13.794633 15.990353 14.001953 16.464434 14.001953 17 L 13.998047 21.160156 A 0.50005 0.50005 0 0 0 14.630859 21.642578 C 18.878428 20.490372 22 16.599237 22 12 C 22 6.4769321 17.514404 1.9921875 12 1.9921875 z M 12 2.9921875 C 16.973596 2.9921875 21 7.0170679 21 12 C 21 15.899732 18.470363 19.145081 14.998047 20.388672 L 15.001953 17 C 15.001953 16.421513 14.688987 15.964437 14.404297 15.505859 C 16.432596 14.813419 18.001953 13.369173 18.001953 11.494141 C 18.001953 10.506223 17.528746 9.6094427 16.826172 8.8808594 C 16.963004 8.0965535 17.032667 7.2949738 16.970703 6.4570312 A 0.50005 0.50005 0 0 0 16.3125 6.0214844 C 15.491527 6.300863 14.703446 6.7215379 13.960938 7.2734375 C 13.34208 7.110241 12.692308 6.9921875 12 6.9921875 C 11.30618 6.9921875 10.656139 7.1108109 10.037109 7.2734375 C 9.2949426 6.7217093 8.5094793 6.2989123 7.6894531 6.0195312 A 0.50005 0.50005 0 0 0 7.0292969 6.4550781 C 6.9654142 7.294134 7.0380099 8.0939393 7.1738281 8.8769531 C 6.4709034 9.6061723 6 10.504427 6 11.492188 C 6 13.367279 7.5663139 14.813867 9.59375 15.505859 C 9.3112432 15.962509 9.0029789 16.419068 9 16.992188 L 7.5 16.992188 C 7.2241522 16.992188 7.0052524 16.845238 6.7363281 16.513672 C 6.4674039 16.182105 6.2065255 15.697988 5.9277344 15.234375 A 0.50005 0.50005 0 0 0 5.46875 14.988281 A 0.50005 0.50005 0 0 0 5.0722656 15.75 C 5.3304745 16.179387 5.5979086 16.697395 5.9589844 17.142578 C 6.3200601 17.587762 6.8328478 17.992188 7.5 17.992188 L 8.9980469 17.992188 L 8.9980469 20.388672 C 5.5278881 19.144471 3 15.898951 3 12 C 3 7.0170679 7.0264043 2.9921875 12 2.9921875 z"></path>
-</svg>
-                    <div class="skill-content">
-                        <h3 class="skill-name">MeatShop</h3>
-                        <p class="skill-description">A fresh meat shopping app offering a wide variety of quality meats with easy online ordering.</p>
-                       
-                    </div>
-                    <div class="skill-glow"></div>
-                </div>
-
-                <!-- project 2 Card -->
-                <div class="skill-card" data-skill="html" data-level="95">
-                    <div class="skill-icon">
-                        <i>2</i>
-                    </div>
-                    <svg onclick="opengithub('loginAuth')" class="github"xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
-<path d="M 12 1.9921875 C 6.4855957 1.9921875 2 6.4769321 2 12 C 2 16.599161 5.1205653 20.490345 9.3671875 21.642578 A 0.50005 0.50005 0 0 0 9.9980469 21.160156 L 9.9980469 17.583984 A 0.50005 0.50005 0 0 0 9.9980469 17.398438 L 9.9980469 17 C 9.9980469 16.463435 10.20474 15.989016 10.550781 15.621094 A 0.50005 0.50005 0 0 0 10.310547 14.794922 C 8.3191985 14.288505 7 12.945349 7 11.492188 C 7 10.73278 7.3615845 9.9960348 8.015625 9.3925781 A 0.50005 0.50005 0 0 0 8.1679688 8.9277344 C 8.066665 8.41934 8.082645 7.8782734 8.0742188 7.34375 C 8.6127591 7.5825374 9.1625862 7.7923277 9.640625 8.1757812 A 0.50005 0.50005 0 0 0 10.09375 8.265625 C 10.683558 8.0925899 11.325263 7.9921875 12 7.9921875 C 12.673669 7.9921875 13.314937 8.0917915 13.904297 8.265625 A 0.50005 0.50005 0 0 0 14.359375 8.1777344 C 14.837054 7.7945694 15.386932 7.5824899 15.925781 7.34375 C 15.916981 7.8785794 15.933881 8.4199143 15.832031 8.9277344 A 0.50005 0.50005 0 0 0 15.982422 9.3945312 C 16.637666 9.9982795 17.001953 10.733923 17.001953 11.494141 C 17.001953 12.945944 15.680991 14.28753 13.689453 14.794922 A 0.50005 0.50005 0 0 0 13.449219 15.623047 C 13.794633 15.990353 14.001953 16.464434 14.001953 17 L 13.998047 21.160156 A 0.50005 0.50005 0 0 0 14.630859 21.642578 C 18.878428 20.490372 22 16.599237 22 12 C 22 6.4769321 17.514404 1.9921875 12 1.9921875 z M 12 2.9921875 C 16.973596 2.9921875 21 7.0170679 21 12 C 21 15.899732 18.470363 19.145081 14.998047 20.388672 L 15.001953 17 C 15.001953 16.421513 14.688987 15.964437 14.404297 15.505859 C 16.432596 14.813419 18.001953 13.369173 18.001953 11.494141 C 18.001953 10.506223 17.528746 9.6094427 16.826172 8.8808594 C 16.963004 8.0965535 17.032667 7.2949738 16.970703 6.4570312 A 0.50005 0.50005 0 0 0 16.3125 6.0214844 C 15.491527 6.300863 14.703446 6.7215379 13.960938 7.2734375 C 13.34208 7.110241 12.692308 6.9921875 12 6.9921875 C 11.30618 6.9921875 10.656139 7.1108109 10.037109 7.2734375 C 9.2949426 6.7217093 8.5094793 6.2989123 7.6894531 6.0195312 A 0.50005 0.50005 0 0 0 7.0292969 6.4550781 C 6.9654142 7.294134 7.0380099 8.0939393 7.1738281 8.8769531 C 6.4709034 9.6061723 6 10.504427 6 11.492188 C 6 13.367279 7.5663139 14.813867 9.59375 15.505859 C 9.3112432 15.962509 9.0029789 16.419068 9 16.992188 L 7.5 16.992188 C 7.2241522 16.992188 7.0052524 16.845238 6.7363281 16.513672 C 6.4674039 16.182105 6.2065255 15.697988 5.9277344 15.234375 A 0.50005 0.50005 0 0 0 5.46875 14.988281 A 0.50005 0.50005 0 0 0 5.0722656 15.75 C 5.3304745 16.179387 5.5979086 16.697395 5.9589844 17.142578 C 6.3200601 17.587762 6.8328478 17.992188 7.5 17.992188 L 8.9980469 17.992188 L 8.9980469 20.388672 C 5.5278881 19.144471 3 15.898951 3 12 C 3 7.0170679 7.0264043 2.9921875 12 2.9921875 z"></path>
-</svg>
-                    <div class="skill-content">
-                        <h3 class="skill-name">Sign up page</h3>
-                        <p class="skill-description">A user-friendly sign-up page for creating an account with validation and authentication.</p>
-                        
-                    </div>
-                    <div class="skill-glow"></div>
-                </div>
-
-                <!-- project 3 Card -->
-                <div class="skill-card" data-skill="mongodb" data-level="78">
-                    <div class="skill-icon">
-                  <i>3</i>
-                    </div>
-
-                    <svg onclick="opengithub('movie2020')" class="github"xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
-<path d="M 12 1.9921875 C 6.4855957 1.9921875 2 6.4769321 2 12 C 2 16.599161 5.1205653 20.490345 9.3671875 21.642578 A 0.50005 0.50005 0 0 0 9.9980469 21.160156 L 9.9980469 17.583984 A 0.50005 0.50005 0 0 0 9.9980469 17.398438 L 9.9980469 17 C 9.9980469 16.463435 10.20474 15.989016 10.550781 15.621094 A 0.50005 0.50005 0 0 0 10.310547 14.794922 C 8.3191985 14.288505 7 12.945349 7 11.492188 C 7 10.73278 7.3615845 9.9960348 8.015625 9.3925781 A 0.50005 0.50005 0 0 0 8.1679688 8.9277344 C 8.066665 8.41934 8.082645 7.8782734 8.0742188 7.34375 C 8.6127591 7.5825374 9.1625862 7.7923277 9.640625 8.1757812 A 0.50005 0.50005 0 0 0 10.09375 8.265625 C 10.683558 8.0925899 11.325263 7.9921875 12 7.9921875 C 12.673669 7.9921875 13.314937 8.0917915 13.904297 8.265625 A 0.50005 0.50005 0 0 0 14.359375 8.1777344 C 14.837054 7.7945694 15.386932 7.5824899 15.925781 7.34375 C 15.916981 7.8785794 15.933881 8.4199143 15.832031 8.9277344 A 0.50005 0.50005 0 0 0 15.982422 9.3945312 C 16.637666 9.9982795 17.001953 10.733923 17.001953 11.494141 C 17.001953 12.945944 15.680991 14.28753 13.689453 14.794922 A 0.50005 0.50005 0 0 0 13.449219 15.623047 C 13.794633 15.990353 14.001953 16.464434 14.001953 17 L 13.998047 21.160156 A 0.50005 0.50005 0 0 0 14.630859 21.642578 C 18.878428 20.490372 22 16.599237 22 12 C 22 6.4769321 17.514404 1.9921875 12 1.9921875 z M 12 2.9921875 C 16.973596 2.9921875 21 7.0170679 21 12 C 21 15.899732 18.470363 19.145081 14.998047 20.388672 L 15.001953 17 C 15.001953 16.421513 14.688987 15.964437 14.404297 15.505859 C 16.432596 14.813419 18.001953 13.369173 18.001953 11.494141 C 18.001953 10.506223 17.528746 9.6094427 16.826172 8.8808594 C 16.963004 8.0965535 17.032667 7.2949738 16.970703 6.4570312 A 0.50005 0.50005 0 0 0 16.3125 6.0214844 C 15.491527 6.300863 14.703446 6.7215379 13.960938 7.2734375 C 13.34208 7.110241 12.692308 6.9921875 12 6.9921875 C 11.30618 6.9921875 10.656139 7.1108109 10.037109 7.2734375 C 9.2949426 6.7217093 8.5094793 6.2989123 7.6894531 6.0195312 A 0.50005 0.50005 0 0 0 7.0292969 6.4550781 C 6.9654142 7.294134 7.0380099 8.0939393 7.1738281 8.8769531 C 6.4709034 9.6061723 6 10.504427 6 11.492188 C 6 13.367279 7.5663139 14.813867 9.59375 15.505859 C 9.3112432 15.962509 9.0029789 16.419068 9 16.992188 L 7.5 16.992188 C 7.2241522 16.992188 7.0052524 16.845238 6.7363281 16.513672 C 6.4674039 16.182105 6.2065255 15.697988 5.9277344 15.234375 A 0.50005 0.50005 0 0 0 5.46875 14.988281 A 0.50005 0.50005 0 0 0 5.0722656 15.75 C 5.3304745 16.179387 5.5979086 16.697395 5.9589844 17.142578 C 6.3200601 17.587762 6.8328478 17.992188 7.5 17.992188 L 8.9980469 17.992188 L 8.9980469 20.388672 C 5.5278881 19.144471 3 15.898951 3 12 C 3 7.0170679 7.0264043 2.9921875 12 2.9921875 z"></path>
-</svg>
-                    <div class="skill-content">
-                        <h3 class="skill-name">Movie review</h3>
-                        <p class="skill-description">A movie review page displaying actors discription with a user-friendly interface.</p>
-                       
-                    </div>
-                    <div class="skill-glow"></div>
-                </div>
-
-            
-            </div>
-
-            <!-- Skills Summary -->
-            <div class="skills-summary">
-                <div class="summary-card">
-                    <div class="summary-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h4>Frontend Development</h4>
-                    <p>Creating responsive and interactive user interfaces</p>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h4>Backend Development</h4>
-                    <p>Building robust server-side applications</p>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h4>Responsive Design</h4>
-                    <p>Ensuring optimal experience across all devices</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Animated Background Elements -->
-        <div class="floating-elements">
-            <div class="floating-element" style="--delay: 0s; --duration: 8s;"></div>
-            <div class="floating-element" style="--delay: 2s; --duration: 10s;"></div>
-            <div class="floating-element" style="--delay: 4s; --duration: 12s;"></div>
-            <div class="floating-element" style="--delay: 6s; --duration: 9s;"></div>
-        </div>
+      </div>
     </section>
-     
 
-      <!-- Contact -->
-      <section id="contact" class="scroll-section">
-         <div class="hero-background" style="z-index: -1;">
-          <div class="hero-particle" data-speed="0.5"></div>
-          <div class="hero-particle" data-speed="0.8"></div>
-          <div class="hero-particle" data-speed="0.3"></div>
-          <div class="hero-particle" data-speed="0.6"></div>
-          <div class="hero-particle" data-speed="0.4"></div>
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div
+        class="container about-container"
+        style="min-height: 74vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;"
+      >
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="about-description">
+           I am Senthilnathan , a passionate Full Stack Developer with hands-on experience in building modern, scalable, and user-friendly web applications. Skilled in MongoDB, Express.js, React.js, and Node.js, I specialize in creating secure REST APIs, responsive frontends, and seamless user experiences.
+            </p>
+            <p class="about-description">
+             I have successfully developed real-time projects, including an E-commerce platform for meat products, an Image Compressor & Optimizer, and a Domain to IP Converter tool, showcasing my ability to solve problems with practical, production-ready solutions. With strong communication skills in Tamil and English, I thrive in collaborative environments and continuously enhance my skills to deliver innovative, performance-driven applications.
+            </p>
+            <a
+              href="resume.pdf"
+              style="margin-top: 1rem"
+              class="btn btn-primary"
+              download
+              ><i class="fas fa-download" style="margin-right: 0.3rem"></i>
+              Download Resume</a
+            >
+          </div>
         </div>
-        <h2>Contact Me</h2>
-        <div class="contact-container">
-          <div class="contact-info">
-            <div class="contact-item">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#007BFF"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                ></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-              <a href="mailto:senthilragunathan2004@gmail.com"
-                >senthilragunathan2004@gmail.com</a
-              >
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3 class="category-title">Frontend</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-html5"></i>
+                <span>HTML5</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="95"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-js-square"></i>
+                <span>JavaScript</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-react"></i>
+                <span>React.js</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-bootstrap"></i>
+                <span>Bootstrap</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85"></div>
+                </div>
+              </div>
             </div>
-            <div class="contact-item">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#007BFF"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                ></path>
-              </svg>
-              <a href="tel:+916374160496">+91-6374160496</a>
+          </div>
+          <div class="skill-category">
+            <h3 class="category-title">Backend</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-node-js"></i>
+                <span>Node.js</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-server"></i>
+                <span>Express.js</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="75"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70"></div>
+                </div>
+              </div>
             </div>
-            <div class="contact-item">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#007BFF"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M9 19c-5 0-8-3-8-8s3-8 8-8 8 3 8 8-3 8-8 8z"></path>
-                <path d="M2 9h18"></path>
-                <path d="M2 15h18"></path>
-                <path d="M9 3v18"></path>
-              </svg>
-              <a href="https://www.google.com/maps/search/?api=1&query=12.81875,80.2249297" target="_blank">Location</a>
+          </div>
+          <div class="skill-category">
+            <h3 class="category-title">Database</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <span>MongoDB</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="75"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <span>MySQL</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="70"></div>
+                </div>
+              </div>
             </div>
-            <div class="contact-item">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#007BFF"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                ></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-              <a
-                href="https://linkedin.com/in/senthil-nathan-r-467980334"
-                target="_blank"
-                >LinkedIn Profile</a
-              >
-            </div>
-            <div class="contact-item">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#007BFF"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M9 19c-5 0-8-3-8-8s3-8 8-8 8 3 8 8-3 8-8 8z"></path>
-                <path d="M2 9h18"></path>
-                <path d="M2 15h18"></path>
-                <path d="M9 3v18"></path>
-              </svg>
-              <a href="https://github.com/senthilnathan-2004" target="_blank"
-                >GitHub Profile</a
-              >
+          </div>
+          <div class="skill-category">
+            <h3 class="category-title">Tools</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-code"></i>
+                <span>VS Code</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-bug"></i>
+                <span>Postman</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="80"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-
-   <div class="portfolio-container">
-        <section class="animated-portfolio">
-            
-            <div class="fullstack-container">
-                <div class="word-group" data-word="FULLSTACK">
-                    <div class="letter-item" data-letter="F" data-description="Futuristic">
-                        <span class="letter">F</span>
-                        <span class="description">Futuristic</span>
-                    </div>
-                    <div class="letter-item" data-letter="U" data-description="User-Centric">
-                        <span class="letter">U</span>
-                        <span class="description">User-Centric</span>
-                    </div>
-                    <div class="letter-item" data-letter="L" data-description="Logical">
-                        <span class="letter">L</span>
-                        <span class="description">Logical</span>
-                    </div>
-                    <div class="letter-item" data-letter="L" data-description="Lean">
-                        <span class="letter">L</span>
-                        <span class="description">Lean</span>
-                    </div>
-                    <div class="letter-item" data-letter="S" data-description="Scalable">
-                        <span class="letter">S</span>
-                        <span class="description">Scalable</span>
-                    </div>
-                    <div class="letter-item" data-letter="T" data-description="Tech-Savvy">
-                        <span class="letter">T</span>
-                        <span class="description">Tech-Savvy</span>
-                    </div>
-                    <div class="letter-item" data-letter="A" data-description="Adaptive">
-                        <span class="letter">A</span>
-                        <span class="description">Adaptive</span>
-                    </div>
-                    <div class="letter-item" data-letter="C" data-description="Creative">
-                        <span class="letter">C</span>
-                        <span class="description">Creative</span>
-                    </div>
-                    <div class="letter-item" data-letter="K" data-description="Knowledgeable">
-                        <span class="letter">K</span>
-                        <span class="description">Knowledgeable</span>
-                    </div>
-                </div>
-                
-                <div class="word-group" data-word="DEVELOPER">
-                    <div class="letter-item" data-letter="D" data-description="Dynamic">
-                        <span class="letter">D</span>
-                        <span class="description">Dynamic</span>
-                    </div>
-                    <div class="letter-item" data-letter="E" data-description="Efficient">
-                        <span class="letter">E</span>
-                        <span class="description">Efficient</span>
-                    </div>
-                    <div class="letter-item" data-letter="V" data-description="Visionary">
-                        <span class="letter">V</span>
-                        <span class="description">Visionary</span>
-                    </div>
-                    <div class="letter-item" data-letter="E" data-description="Elegant">
-                        <span class="letter">E</span>
-                        <span class="description">Elegant</span>
-                    </div>
-                    <div class="letter-item" data-letter="L" data-description="Leading">
-                        <span class="letter">L</span>
-                        <span class="description">Leading</span>
-                    </div>
-                    <div class="letter-item" data-letter="O" data-description="Optimized">
-                        <span class="letter">O</span>
-                        <span class="description">Optimized</span>
-                    </div>
-                    <div class="letter-item" data-letter="P" data-description="Problem-Solver">
-                        <span class="letter">P</span>
-                        <span class="description">Problem-Solver</span>
-                    </div>
-                    <div class="letter-item" data-letter="E" data-description="Experienced">
-                        <span class="letter">E</span>
-                        <span class="description">Experienced</span>
-                    </div>
-                    <div class="letter-item" data-letter="R" data-description="Reliable">
-                        <span class="letter">R</span>
-                        <span class="description">Reliable</span>
-                    </div>
-                </div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">
+                MERN Stack Meatshop Online Application
+              </h3>
+              <div class="project-date">Jul 2025 – Present</div>
             </div>
-            
-            <div class="animation-controls">
-                <button class="replay-btn" id="replayAnimation">
-                    <span class="btn-text">Replay Animation</span>
-                    <span class="btn-icon"></span>
-                </button>
+            <p class="project-description">
+              Full-stack e-commerce application for meat products built with
+              MERN stack. Features include user authentication with JWT, dynamic
+              product listing, category filtering, shopping cart management, and
+              secure REST API architecture.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">JWT</span>
             </div>
-        </section>
-    </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/senthilnathan-2004/meatshop"
+                target="_blank"
+                class="project-link"
+              >
+                <i class="fab fa-github"></i>
+                View Code
+              </a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">MERN Stack Movie Review Application</h3>
+              <div class="project-date">Mar 2024 – Feb 2024</div>
+            </div>
+            <p class="project-description">
+              Full-stack web application for movie reviews with detailed movie
+              descriptions and user-submitted reviews. Includes interactive
+              React frontend, REST API backend, and role-based content
+              moderation to manage abusive content.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">REST API</span>
+              <span class="tech-tag">MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/senthilnathan-2004/movie2020"
+                target="_blank"
+                class="project-link"
+              >
+                <i class="fab fa-github"></i>
+                View Code
+              </a>
+            </div>
+          </div>
 
-    </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">
+                Image Compressor Web Application
+              </h3>
+              <div class="project-date">Jan 2024 – Feb 2024</div>
+            </div>
+            <p class="project-description">
+              Free online image compressor and optimizer built for speed and quality. Supports resizing, format conversion (JPEG, PNG, WebP), and metadata removal. Designed to reduce file size while preserving image clarity for web performance and SEO.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JAVASCRIPT</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/senthilnathan-2004/imgcompressor"
+                target="_blank"
+                class="project-link"
+              >
+                <i class="fab fa-github"></i>
+                View Code
+              </a>
+            </div>
+          </div>
+
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">
+                Domain to IP converter  Application
+              </h3>
+              <div class="project-date">Nav 2023 – Dec 2023</div>
+            </div>
+            <p class="project-description">
+             Free online Domain to IP converter and HTTP inspector for quick network analysis. Instantly fetches IP addresses, HTTP status codes, and response headers from any URL. Built to help developers and sysadmins with fast domain diagnostics and troubleshooting.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JAVASCRIPT</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/senthilnathan-2004/domaintoip"
+                target="_blank"
+                class="project-link"
+              >
+                <i class="fab fa-github"></i>
+                View Code
+              </a>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+      <div class="container">
+        <h2 class="section-title">Education & Certifications</h2>
+        <div class="education-timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">
+                Bachelor of Technology in Computer Science and Engineering
+              </h3>
+              <div class="timeline-subtitle">
+                Anand Institute Of Higher Technology, Chennai
+              </div>
+              <div class="timeline-date">2022 – 2026</div>
+              <div class="timeline-grade">CGPA: 8.2/10</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">Higher Secondary Certificate (HSC)</h3>
+              <div class="timeline-subtitle">
+                Kuyilappalayam Higher Secondary School
+              </div>
+              <div class="timeline-date">2021 – 2022</div>
+              <div class="timeline-grade">Percentage: 82%</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">
+                Secondary School Leaving Certificate (SSLC)
+              </h3>
+              <div class="timeline-subtitle">
+                Government Higher Secondary School
+              </div>
+              <div class="timeline-date">2019 – 2020</div>
+              <div class="timeline-grade">Percentage: 70%</div>
+            </div>
+          </div>
+        </div>
+        <div class="certifications">
+          <h3 class="certifications-title">Certifications</h3>
+          <div class="certifications-grid">
+            <div class="certification-item">
+              <i class="fas fa-certificate"></i>
+              <div class="certification-info">
+                <h4>MongoDB Certification</h4>
+                <p>MongoDB</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Chat Section -->
+    <section id="ai-chat" class="ai-chat">
+      <div class="container">
+        <h2 class="section-title">AI Assistant</h2>
+        <div class="chat-container">
+          <div class="chat-header">
+            <div class="chat-avatar">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div class="chat-info">
+              <h3>Senthil's AI Assistant</h3>
+              <p>
+                Ask me anything about Senthilnathan's skills, projects, or
+                full-stack development!
+              </p>
+            </div>
+            <div class="chat-status" id="chatStatus">
+              <span class="status-indicator"></span>
+              <span class="status-text">Ready</span>
+            </div>
+          </div>
+          <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+              <div class="message-avatar">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="message-content">
+                <p>
+                  Hello! I'm Senthilnathan's AI assistant. I can help you learn
+                  more about his skills, projects, education, and full-stack
+                  development expertise. What would you like to know?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="chat-input-container">
+            <div class="chat-input-wrapper">
+              <input
+                type="text"
+                id="chatInput"
+                placeholder="Ask me about Senthil's experience, skills, or projects..."
+              />
+              <button id="sendButton" class="send-button">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+            <div class="suggested-questions">
+              <button
+                class="suggestion-btn"
+                data-question="Tell me about Senthil's technical skills"
+              >
+                Technical Skills
+              </button>
+              <button
+                class="suggestion-btn"
+                data-question="What projects has Senthil worked on?"
+              >
+                Projects
+              </button>
+              <button
+                class="suggestion-btn"
+                data-question="What is Senthil's educational background?"
+              >
+                Education
+              </button>
+              <button
+                class="suggestion-btn"
+                data-question="How can I contact Senthil?"
+              >
+                Contact Info
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Let's Connect!</h3>
+            <p>
+              I'm always open to discussing new opportunities, interesting
+              projects, or just having a chat about technology and development.
+            </p>
+            <div class="contact-details">
+              <a
+                href="mailto:senthilragunathan2004@gmail.com"
+                class="contact-a"
+              >
+                <div class="contact-item">
+                  <i class="fas fa-envelope"></i>
+                  <div class="contact-text">
+                    <span class="contact-label">Email</span>
+
+                    <span class="contact-name"
+                      >senthilragunathan2004@gmail.com</span
+                    >
+                  </div>
+                </div></a
+              >
+
+              <a href="tel:+916374160496" class="contact-a">
+                <div class="contact-item">
+                  <i class="fas fa-phone"></i>
+                  <div class="contact-text">
+                    <span class="contact-label">Phone</span>
+
+                    <span class="contact-name">+91-6374160496</span>
+                  </div>
+                </div></a
+              >
+
+              <a href="https://www.google.com/maps/search/?api=1&query=12.81875,80.2249297" target="_blank" class="contact-a">
+                <div class="contact-item">
+                  <i class="fas fa-map-marker-alt"></i>
+
+                  <div class="contact-text">
+                    <span class="contact-label">Location</span>
+                    <span class="contact-name">Current Location</span>
+                  </div>
+                </div></a
+              >
+
+              <a
+                href="https://github.com/senthilnathan-2004"
+                target="_blank"
+                class="contact-a"
+              >
+                <div class="contact-item">
+                  <i class="fab fa-github"></i>
+                  <div class="contact-text">
+                    <span class="contact-label">GitHub</span>
+
+                    <span class="contact-name">senthilnathan-2004</span>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/senthilnathan--r/"
+                target="_blank"
+                class="contact-a"
+              >
+                <div class="contact-item">
+                  <i class="fab fa-linkedin"></i>
+                  <div class="contact-text">
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-name">senthilnathan--r</span>
+                  </div>
+                </div></a
+              >
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" style="display: none">
+                <i class="fas fa-spinner fa-spin"></i>
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
-    <footer>
-      <p>&copy; <span style="color: #ffffff ;" id="date"></span> Senthilnathan R. All rights reserved.</p>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-text">
+            <p>&copy; <span  id="date"></span> Senthilnathan R. All rights reserved.</p>
+          </div>
+          <div class="footer-socials">
+            <a
+              href="https://github.com/senthilnathan-2004"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://linkedin.com/in/senthilnathan--r"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.google.com/maps/search/?api=1&query=12.81875,80.2249297" target="_blank" class="social-link">
+              <i class="fas fa-map-marker-alt"></i>
+
+            </a>
+            <a
+              href="mailto:senthilragunathan2004@gmail.com"
+              class="social-link"
+            >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
 
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loader">
+        <div class="loader-text">SR</div>
+        <div class="loader-bar">
+          <div class="loader-progress"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
+    <script src="ai-agent.js"></script>
   </body>
 </html>
