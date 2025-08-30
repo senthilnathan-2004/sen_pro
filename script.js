@@ -517,9 +517,8 @@ document.getElementById("contactForm").addEventListener("submit", async function
   else if (!email) error = "Please enter your email";
   else if (!emailRegex.test(email)) error = "Please enter a valid email address";
   else if (!subject) error = "Please enter your subject";
-  else if (subject.length < 5) error = "Subject must be at least 5 characters long";
   else if (!message) error = "Please enter your message";
-  else if (message.length < 5) error = "Message must be at least 5 characters long";
+
 
   // If validation failed
   if (error) {
