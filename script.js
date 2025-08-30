@@ -510,34 +510,32 @@ document.getElementById("date").textContent = formattedDate;
 
         // Validation
   if (!name) {
-      showNotification('Please enter your name', 'error');
-    return;
+      return showNotification('Please enter your name', 'error');
+
   }
 
   if (!email) {
-      showNotification('Please enter your email', 'error');
-    return;
+      return showNotification('Please enter your email', 'error');
+
   }
 
   // Simple email format check
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-       showNotification('Please enter a valid email address', 'error');
-    return;
+       return showNotification('Please enter a valid email address', 'error');
+    
   }
 if (!subject) {
-    showNotification('Please enter your subject', 'error');
-    return;
+    return showNotification('Please enter your subject', 'error');
+
   }
 
   if (!message) {
-      showNotification('Please enter your message', 'error');
-    return;
+     return showNotification('Please enter your message', 'error');
+   
   }
-
-  if (message.length < 5) {
-         showNotification('Message must be at least 5 characters long', 'error');
-    return;
+if (message.length < 5) {
+   return showNotification('Message must be at least 5 characters long', 'error');
   }
          
         const data = {
