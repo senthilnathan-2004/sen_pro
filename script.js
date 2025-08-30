@@ -534,9 +534,6 @@ if (!subject) {
      return showNotification('Please enter your message', 'error');
    
   }
-if (message.length < 5) {
-   return showNotification('Message must be at least 5 characters long', 'error');
-  }
          
         const data = {
             name: name,
