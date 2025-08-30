@@ -508,32 +508,33 @@ document.getElementById("contactForm").addEventListener("submit", async function
   const subject = document.getElementById("subject").value.trim();
   const message = document.getElementById("message").value.trim();
 
-  // Helper function to handle validation errors
-  function handleValidationError(msg) {
-    showNotification(msg, 'error');
-    btnText.style.display = 'block';
-    btnLoading.style.display = 'none';
-    submitBtn.disabled = false;
-    return false; // just stop further execution
-  }
-
-  // Validation
-  if (!name) return handleValidationError('Please enter your name');
-  if (!email) return handleValidationError('Please enter your email');
-
+  // Simple email format check
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) return handleValidationError('Please enter a valid email address');
 
-  if (!subject) return handleValidationError('Please enter your subject');
-  if (subject.length < 5) return handleValidationError('Subject must be at least 5 characters long');
+  // Collect validation errors
+  let error = "";
+  if (!name) error = "Please enter your name";
+  else if (!email) error = "Please enter your email";
+  else if (!emailRegex.test(email)) error = "Please enter a valid email address";
+  else if (!subject) error = "Please enter your subject";
+  else if (subject.length < 5) error = "Subject must be at least 5 characters long";
+  else if (!message) error = "Please enter your message";
+  else if (message.length < 5) error = "Message must be at least 5 characters long";
 
-  if (!message) return handleValidationError('Please enter your message');
-  if (message.length < 5) return handleValidationError('Message must be at least 5 characters long');
+  // If validation failed
+  if (error) {
+    showNotification(error, "error");
+
+    // reset button state so user can try again
+    btnText.style.display = "block";
+    btnLoading.style.display = "none";
+    submitBtn.disabled = false;
+    return; // stop here, but form will work again next time
+  }
 
   const data = { name, email, subject, message };
 
   try {
-    // Send to backend
     const res = await fetch("https://pro-backend-12nl.onrender.com/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -542,18 +543,18 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
     const result = await res.json();
     if (res.ok) {
-      showNotification(result.message || 'Message sent successfully!', 'success');
-      contactForm.reset(); // reset all fields at once
+      showNotification(result.message || "Message sent successfully!", "success");
+      contactForm.reset(); // clears all inputs
     } else {
-      showNotification(result.error || 'Failed to send message.', 'error');
+      showNotification(result.error || "Failed to send message.", "error");
     }
   } catch (error) {
     console.error(error);
-    showNotification('Failed to send message. Please try again.', 'error');
+    showNotification("Failed to send message. Please try again.", "error");
   } finally {
-    // Reset button state
-    btnText.style.display = 'block';
-    btnLoading.style.display = 'none';
+    // Always reset button state
+    btnText.style.display = "block";
+    btnLoading.style.display = "none";
     submitBtn.disabled = false;
   }
 });
