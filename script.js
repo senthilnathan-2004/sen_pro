@@ -534,7 +534,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
   const data = { name, email, subject, message };
 
   try {
-    const res = await fetch("https://pro-backend-12nl.onrender.com/api/contact", {
+    const res = await fetch("https://pro-backend-sd2s.onrender.com/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -543,7 +543,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
     const result = await res.json();
     if (res.ok) {
       showNotification(result.message || "Message sent successfully!", "success");
-      contactForm.reset(); // clears all inputs
+      return contactForm.reset(); // clears all inputs
     } else {
       showNotification(result.error || "Failed to send message.", "error");
     }
