@@ -490,17 +490,94 @@ document.getElementById("date").textContent = formattedDate;
 
 //send mail
 
- document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+ document.getElementById("contactForm").addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const btnLoading = submitBtn.querySelector('.btn-loading');
+        
+        // Show loading state
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'block';
+        submitBtn.disabled = true;
+        
+        // Get form data
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const subject = document.getElementById("subject").value;
-    const message = document.getElementById("message").value;
+        // Validation
+  if (!name) {
+      showNotification('Please enter your name', 'error');
+    return;
+  }
 
-    const mailtoLink = `mailto:senthilragunathan2004@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-      "Name: " + name + "\nEmail: " + email + "\n\n" + message
-    )}`;
+  if (!email) {
+      showNotification('Please enter your email', 'error');
+    return;
+  }
 
-    window.location.href = mailtoLink;
-  });
+  // Simple email format check
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+       showNotification('Please enter a valid email address', 'error');
+    return;
+  }
+if (!subject) {
+    showNotification('Please enter your subject', 'error');
+    return;
+  }
+
+  if (!message) {
+      showNotification('Please enter your message', 'error');
+    return;
+  }
+
+  if (message.length < 5) {
+         showNotification('Message must be at least 5 characters long', 'error');
+    return;
+  }
+         
+        const data = {
+            name: name,
+            email: email,
+            subject:subject,
+            message: message
+        };
+        
+        try {
+            //Send to backend
+            const res = await fetch("https://pro-backend-12nl.onrender.com/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+
+            const result = await res.json();
+            if (res.ok) {
+                showNotification(result.message || 'Message sent successfully!', 'success');
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("subject").value = "";
+                document.getElementById("message").value = "";
+            } else {
+                showNotification(result.error || 'Failed to send message.', 'error');
+            }
+            
+        } catch (error) {
+            console.error(error);
+            showNotification('Failed to send message. Please try again.', 'error');
+        } finally {
+            // Reset button state
+            btnText.style.display = 'block';
+            btnLoading.style.display = 'none';
+            submitBtn.disabled = false;
+        }
+    });
+
+
+
+
+
