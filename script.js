@@ -489,9 +489,9 @@ document.getElementById("date").textContent = formattedDate;
 
 
 //send mail
-
- document.getElementById("contactForm").addEventListener('submit', async (e) => {
-        e.preventDefault();
+                                                         
+const submitForm = async (e) => {
+    e.preventDefault();
         
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const btnText = submitBtn.querySelector('.btn-text');
@@ -529,11 +529,17 @@ if (!subject) {
     return showNotification('Please enter your subject', 'error');
 
   }
+    if (subject.length < 5) {
+    return showNotification('Subject must be at least 5 characters long', 'error');
+  }
 
   if (!message) {
      return showNotification('Please enter your message', 'error');
    
   }
+      if (message.length < 5) {
+          return showNotification('Message must be at least 5 characters long', 'error');
+     }
          
         const data = {
             name: name,
@@ -570,7 +576,7 @@ if (!subject) {
             btnLoading.style.display = 'none';
             submitBtn.disabled = false;
         }
-    });
+    };
 
 
 
