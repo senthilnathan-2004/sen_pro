@@ -489,9 +489,9 @@ document.getElementById("date").textContent = formattedDate;
 
 
 //send mail
-                                                         
-const submitForm = async (e) => {
-    e.preventDefault();
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
         
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const btnText = submitBtn.querySelector('.btn-text');
@@ -564,19 +564,19 @@ if (!subject) {
                 document.getElementById("subject").value = "";
                 document.getElementById("message").value = "";
             } else {
-                showNotification(result.error || 'Failed to send message.', 'error');
+                 return showNotification(result.error || 'Failed to send message.', 'error');
             }
             
         } catch (error) {
             console.error(error);
-            showNotification('Failed to send message. Please try again.', 'error');
+            return showNotification('Failed to send message. Please try again.', 'error');
         } finally {
             // Reset button state
             btnText.style.display = 'block';
             btnLoading.style.display = 'none';
             submitBtn.disabled = false;
         }
-    };
+    });
 
 
 
