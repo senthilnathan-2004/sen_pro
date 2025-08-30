@@ -492,93 +492,68 @@ document.getElementById("date").textContent = formattedDate;
 document.getElementById("contactForm").addEventListener("submit", async function (e) {
   e.preventDefault();
 
-        
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const btnText = submitBtn.querySelector('.btn-text');
-        const btnLoading = submitBtn.querySelector('.btn-loading');
-        
-        // Show loading state
-        btnText.style.display = 'none';
-        btnLoading.style.display = 'block';
-        submitBtn.disabled = true;
-        
-        // Get form data
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const subject = document.getElementById("subject").value.trim();
-        const message = document.getElementById("message").value.trim();
+  const contactForm = document.getElementById("contactForm");
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
+  const btnText = submitBtn.querySelector('.btn-text');
+  const btnLoading = submitBtn.querySelector('.btn-loading');
 
-        // Validation
-  if (!name) {
-      return showNotification('Please enter your name', 'error');
+  // Show loading state
+  btnText.style.display = 'none';
+  btnLoading.style.display = 'block';
+  submitBtn.disabled = true;
 
+  // Get form data
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const subject = document.getElementById("subject").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  // Helper function to handle validation errors
+  function handleValidationError(msg) {
+    showNotification(msg, 'error');
+    btnText.style.display = 'block';
+    btnLoading.style.display = 'none';
+    submitBtn.disabled = false;
+    return false; // just stop further execution
   }
 
-  if (!email) {
-      return showNotification('Please enter your email', 'error');
+  // Validation
+  if (!name) return handleValidationError('Please enter your name');
+  if (!email) return handleValidationError('Please enter your email');
 
-  }
-
-  // Simple email format check
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-       return showNotification('Please enter a valid email address', 'error');
-    
-  }
-if (!subject) {
-    return showNotification('Please enter your subject', 'error');
+  if (!emailRegex.test(email)) return handleValidationError('Please enter a valid email address');
 
-  }
-    if (subject.length < 5) {
-    return showNotification('Subject must be at least 5 characters long', 'error');
-  }
+  if (!subject) return handleValidationError('Please enter your subject');
+  if (subject.length < 5) return handleValidationError('Subject must be at least 5 characters long');
 
-  if (!message) {
-     return showNotification('Please enter your message', 'error');
-   
-  }
-      if (message.length < 5) {
-          return showNotification('Message must be at least 5 characters long', 'error');
-     }
-         
-        const data = {
-            name: name,
-            email: email,
-            subject:subject,
-            message: message
-        };
-        
-        try {
-            //Send to backend
-            const res = await fetch("https://pro-backend-12nl.onrender.com/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data),
-            });
+  if (!message) return handleValidationError('Please enter your message');
+  if (message.length < 5) return handleValidationError('Message must be at least 5 characters long');
 
-            const result = await res.json();
-            if (res.ok) {
-                showNotification(result.message || 'Message sent successfully!', 'success');
-                document.getElementById("name").value = "";
-                document.getElementById("email").value = "";
-                document.getElementById("subject").value = "";
-                document.getElementById("message").value = "";
-            } else {
-                 return showNotification(result.error || 'Failed to send message.', 'error');
-            }
-            
-        } catch (error) {
-            console.error(error);
-            return showNotification('Failed to send message. Please try again.', 'error');
-        } finally {
-            // Reset button state
-            btnText.style.display = 'block';
-            btnLoading.style.display = 'none';
-            submitBtn.disabled = false;
-        }
+  const data = { name, email, subject, message };
+
+  try {
+    // Send to backend
+    const res = await fetch("https://pro-backend-12nl.onrender.com/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
     });
 
-
-
-
-
+    const result = await res.json();
+    if (res.ok) {
+      showNotification(result.message || 'Message sent successfully!', 'success');
+      contactForm.reset(); // reset all fields at once
+    } else {
+      showNotification(result.error || 'Failed to send message.', 'error');
+    }
+  } catch (error) {
+    console.error(error);
+    showNotification('Failed to send message. Please try again.', 'error');
+  } finally {
+    // Reset button state
+    btnText.style.display = 'block';
+    btnLoading.style.display = 'none';
+    submitBtn.disabled = false;
+  }
+});
