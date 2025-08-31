@@ -557,25 +557,3 @@ document.getElementById("contactForm").addEventListener("submit", async function
     submitBtn.disabled = false;
   }
 });
-
-
-   const deployHookUrl = "https://api.render.com/deploy/srv-d2pi3tndiees73c1fmu0?key=eSX6d_S5Rno";
-
-    // Function to trigger the deploy hook
-    function triggerDeploy() {
-      fetch(deployHookUrl, { method: 'GET' })
-        .then(response => {
-          if (response.ok) {
-            console.log(new Date().toLocaleTimeString(), "→ Deploy triggered successfully!");
-          } else {
-            console.error(new Date().toLocaleTimeString(), "→ Failed to trigger deploy:", response.status);
-          }
-        })
-        .catch(error => console.error(new Date().toLocaleTimeString(), "→ Error triggering deploy:", error));
-    }
-
-    // Trigger immediately on page load
-    triggerDeploy();
-
-    // Trigger every 10 minutes
-    setInterval(triggerDeploy, 1 * 60 * 1000);
