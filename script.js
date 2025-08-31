@@ -559,11 +559,11 @@ document.getElementById("contactForm").addEventListener("submit", async function
 });
 
 
-   const deployHookUrl = "https://api.render.com/deploy/srv-d2pi3tndiees73c1fmu0?key=7fa2Bflv6Kc";
+   const deployHookUrl = "https://api.render.com/deploy/srv-d2pi3tndiees73c1fmu0?key=eSX6d_S5Rno";
 
     // Function to trigger the deploy hook
     function triggerDeploy() {
-      fetch(deployHookUrl, { method: 'POST' })
+      fetch(deployHookUrl, { method: 'GET' })
         .then(response => {
           if (response.ok) {
             console.log(new Date().toLocaleTimeString(), "→ Deploy triggered successfully!");
