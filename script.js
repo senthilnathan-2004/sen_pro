@@ -534,7 +534,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
   const data = { name, email, subject, message };
 
   try {
-    const res = await fetch("https://pro-backend-sd2s.onrender.com/api/contact", {
+    const res = await fetch("https://pro-backend-uumi.onrender.com/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
